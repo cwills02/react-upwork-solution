@@ -3,8 +3,8 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Input from "@mui/material/Input";
 
-const PRIMARY_GREEN = "#39B54A";
-const SECONDARY_NAVY = "#2B5468";
+export const PRIMARY_GREEN = "#39B54A";
+export const SECONDARY_NAVY = "#2B5468";
 
 export const LoginBox = styled(Box)(() => ({
   background: "white",
