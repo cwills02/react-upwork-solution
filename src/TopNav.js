@@ -56,7 +56,13 @@ export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ background: SECONDARY_NAVY }}>
-        <Toolbar sx={{ paddingLeft: "0" }}>
+        <Toolbar
+          sx={{
+            paddingLeft: "0 !important",
+            display: "flex",
+            justifyContent: "space-between"
+          }}
+        >
           <Search>
             <SearchIconWrapper>
               <SearchIcon />

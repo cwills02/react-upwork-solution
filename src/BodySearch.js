@@ -48,7 +48,7 @@ const SearchIconWrapper = styled("div")(({ theme }) => ({
 
 export default function BodySearch() {
   return (
-    <Search>
+    <Search sx={{ marginBottom: "30px" }}>
       <SearchIconWrapper>
         <SearchIcon sx={{ color: "white" }} />
       </SearchIconWrapper>
