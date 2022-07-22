@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import SearchIcon from "@mui/icons-material/Search";
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
+import { Link } from "react-router-dom";
 
 import { SECONDARY_NAVY } from "./StyledComponents.js";
 
@@ -78,8 +79,12 @@ export default function ButtonAppBar() {
             sx={{ flexGrow: 1 }}
           ></Typography>
           <Box sx={{ display: "flex" }}>
-            <Button color="inherit">Find a Job</Button>
-            <Button color="inherit">Login</Button>
+            <Link to="/jobs" style={{ color: "white", textDecoration: "none" }}>
+              <Button color="inherit">Find a Job</Button>
+            </Link>
+            <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+              <Button color="inherit">Login</Button>
+            </Link>
           </Box>
         </Toolbar>
       </AppBar>

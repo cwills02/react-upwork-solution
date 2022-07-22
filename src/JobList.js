@@ -31,7 +31,7 @@ export default function JobList({ jobs }) {
                 <LocationOnRoundedIcon
                   sx={{ height: "20px", marginRight: "5px", color: "green" }}
                 />
-                {job.remote ? "Remote, " : ""}, {job.location}
+                {job.remote ? "Remote, " : ""} {job.location}
               </Typography>
               <Typography
                 sx={{ marginTop: "15px" }}

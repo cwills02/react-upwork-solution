@@ -6,6 +6,14 @@ import Input from "@mui/material/Input";
 export const PRIMARY_GREEN = "#39B54A";
 export const SECONDARY_NAVY = "#2B5468";
 
+export const MainBody = styled(Box)(() => ({
+  padding: "50px 10%",
+  height: "500px",
+  display: "flex",
+  textAlign: "left",
+  justifyContent: "space-between"
+}));
+
 export const LoginBox = styled(Box)(() => ({
   background: "white",
   height: "325px",
@@ -32,5 +40,14 @@ export const LoginInput = styled(Input)(() => ({
 
 export const PrimaryButton = styled(Button)(() => ({
   background: PRIMARY_GREEN,
-  borderRadius: "30px"
+  borderRadius: "30px",
+  color: "white"
+}));
+
+export const SecondaryButton = styled(Button)(() => ({
+  background: "none",
+  borderRadius: "30px",
+  color: PRIMARY_GREEN,
+  border: `1px solid ${PRIMARY_GREEN}`,
+  padding: "0px"
 }));

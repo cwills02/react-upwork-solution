@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import CategoryMenu from "./CategoryMenu.js";
 import BodySearch from "./BodySearch";
 import JobList from "./JobList.js";
+import { MainBody } from "./StyledComponents";
 
 export default function JobBoard({ allJobs }) {
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -24,13 +25,7 @@ export default function JobBoard({ allJobs }) {
   return (
     <>
       <TopNav />
-      <Box
-        sx={{
-          p: "50px 4%",
-          height: "500px",
-          display: "flex"
-        }}
-      >
+      <MainBody>
         <Box sx={{ textAlign: "left", width: "30%" }}>
           <Typography
             variant="h5"
@@ -52,10 +47,15 @@ export default function JobBoard({ allJobs }) {
         <Box sx={{ width: "70%" }}>
           <BodySearch />
           <JobList
-            jobs={allJobs.filter((job) => job.category === selectedCategory)}
+            jobs={allJobs.filter((job) => {
+              if (!selectedCategory) {
+                return true;
+              }
+              return job.category === selectedCategory;
+            })}
           />
         </Box>
-      </Box>
+      </MainBody>
     </>
   );
 }
